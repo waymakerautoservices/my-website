@@ -14,87 +14,104 @@
 body{
 margin:0;
 font-family:'Inter',sans-serif;
+background:#f4f6fb;
 color:#222;
-background:#f5f7fb;
 }
 
 header{
 background:#0b1f3a;
 color:white;
-padding:20px 60px;
+padding:18px 60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
+z-index:999;
 }
 
-header h2{
-margin:0;
+.logo{
+font-weight:700;
+font-size:22px;
 }
 
 nav a{
 color:white;
 margin-left:25px;
 text-decoration:none;
-font-weight:500;
-}
-
-nav a:hover{
-opacity:.7;
 }
 
 .hero{
-background:#0b1f3a;
+background-image:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
+background-size:cover;
+background-position:center;
+padding:180px 20px;
 color:white;
 text-align:center;
-padding:120px 20px;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(10,30,60,.75);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:800px;
+margin:auto;
 }
 
 .hero h1{
-font-size:52px;
-max-width:800px;
-margin:auto;
-margin-bottom:25px;
+font-size:56px;
+margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
-max-width:650px;
-margin:auto;
 margin-bottom:40px;
 }
 
 .button{
-display:inline-block;
-padding:16px 32px;
-margin:10px;
 background:#d62828;
 color:white;
-font-weight:600;
-text-decoration:none;
+padding:16px 32px;
 border-radius:6px;
-}
-
-.button:hover{
-opacity:.85;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+margin:10px;
 }
 
 .section{
 max-width:1100px;
 margin:auto;
 padding:90px 20px;
+opacity:0;
+transform:translateY(40px);
+transition:.6s;
+}
+
+.section.visible{
+opacity:1;
+transform:none;
 }
 
 .section h2{
 text-align:center;
-font-size:34px;
 margin-bottom:50px;
+font-size:34px;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:25px;
 }
 
@@ -102,62 +119,43 @@ gap:25px;
 background:white;
 padding:30px;
 border-radius:10px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 text-align:center;
-font-weight:500;
 }
 
-.process{
+.icon{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.trust{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
+gap:20px;
 text-align:center;
 }
 
-.step{
+.badge{
 background:white;
-padding:30px;
+padding:25px;
 border-radius:10px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
+box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
 
-.pricing{
+.fee-tool{
 background:white;
-padding:60px;
-border-radius:12px;
+padding:40px;
+border-radius:10px;
+box-shadow:0 6px 18px rgba(0,0,0,.08);
 text-align:center;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
+max-width:600px;
+margin:auto;
 }
 
-.price{
-font-size:48px;
-color:#d62828;
-margin-bottom:20px;
-}
-
-.calculator input{
+.fee-tool input{
 padding:12px;
 margin:10px;
 width:200px;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-.calculator button{
-margin-top:10px;
-}
-
-form{
-max-width:600px;
-margin:auto;
-display:grid;
-gap:15px;
-}
-
-form input, form textarea{
-padding:12px;
-border-radius:6px;
-border:1px solid #ccc;
 }
 
 footer{
@@ -168,6 +166,19 @@ padding:40px;
 margin-top:60px;
 }
 
+.sticky{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#d62828;
+color:white;
+padding:18px 26px;
+border-radius:40px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 6px 18px rgba(0,0,0,.2);
+}
+
 </style>
 
 </head>
@@ -176,14 +187,14 @@ margin-top:60px;
 
 <header>
 
-<h2>Waymaker Auto Services</h2>
+<div class="logo">🚗 Waymaker Auto Services</div>
 
 <nav>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#process">Process</a>
-<a href="#pricing">Pricing</a>
-<a href="#faq">FAQ</a>
+<a href="#trust">Why Us</a>
+<a href="#tool">Dealer Fees</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -192,14 +203,16 @@ margin-top:60px;
 
 <section class="hero">
 
+<div class="hero-content">
+
 <h1>The Way, The Truth, and the Best Deal of Your Life</h1>
 
-<p>
-Honest car buying guidance from a former dealership insider.  
-Based in Connecticut and serving clients nationwide.
-</p>
+<p>Car buying guidance from a former dealership insider.  
+Based in Connecticut. Serving clients nationwide.</p>
 
 <a class="button" href="#">Schedule Free Consultation</a>
+
+</div>
 
 </section>
 
@@ -212,13 +225,10 @@ Based in Connecticut and serving clients nationwide.
 
 Waymaker Auto Services was founded by Steven Sudar after more than a decade working inside the dealership industry.
 
-Steven has worked in multiple roles including mechanic and salesperson, giving him firsthand knowledge of how dealerships structure deals, warranties, financing, and negotiations.
+After witnessing buyers rushed into confusing contracts and hidden fees, Steven built Waymaker to bring honesty and clarity to the car buying process.
 
-During those years he saw how often buyers were rushed, misled, or left confused about what they were signing.
-
-Our mission is to bring honesty and clarity to the car buying process.
-
-As it says in John 14:6, Jesus said, “I am the way, the truth, and the life.” That commitment to truth guides how we serve every client.
+As Jesus says in John 14:6, “I am the way, the truth, and the life.”  
+That commitment to truth guides how we serve every client.
 
 </p>
 
@@ -231,14 +241,12 @@ As it says in John 14:6, Jesus said, “I am the way, the truth, and the life.�
 
 <div class="services">
 
-<div class="card">Vehicle Sourcing</div>
-<div class="card">Price Negotiation</div>
-<div class="card">Dealer Fee Review</div>
-<div class="card">Lease Negotiation</div>
-<div class="card">Trade-in Negotiation</div>
-<div class="card">Warranty Review</div>
-<div class="card">Pre-Purchase Inspections</div>
-<div class="card">Used Car Inspection Guidance</div>
+<div class="card"><div class="icon">🚗</div>Vehicle Sourcing</div>
+<div class="card"><div class="icon">💰</div>Price Negotiation</div>
+<div class="card"><div class="icon">📄</div>Dealer Fee Review</div>
+<div class="card"><div class="icon">🔁</div>Trade-in Negotiation</div>
+<div class="card"><div class="icon">🛠</div>Inspection Guidance</div>
+<div class="card"><div class="icon">🛡</div>Warranty Review</div>
 
 </div>
 
@@ -249,72 +257,50 @@ As it says in John 14:6, Jesus said, “I am the way, the truth, and the life.�
 
 <h2>How It Works</h2>
 
-<div class="process">
+<div class="services">
 
-<div class="step">
-<h3>1</h3>
-<p>Free 15-minute consultation call.</p>
-</div>
-
-<div class="step">
-<h3>2</h3>
-<p>Vehicle sourcing and research.</p>
-</div>
-
-<div class="step">
-<h3>3</h3>
-<p>Negotiation and dealer fee review.</p>
-</div>
-
-<div class="step">
-<h3>4</h3>
-<p>Contract review before signing.</p>
-</div>
-
-<div class="step">
-<h3>5</h3>
-<p>Drive away confident.</p>
-</div>
+<div class="card">1️⃣ Free 15-minute consultation</div>
+<div class="card">2️⃣ Vehicle sourcing & research</div>
+<div class="card">3️⃣ Negotiation with dealers</div>
+<div class="card">4️⃣ Contract review before signing</div>
+<div class="card">5️⃣ Drive away confident</div>
 
 </div>
 
 </section>
 
 
-<section class="section" id="pricing">
+<section class="section" id="trust">
 
-<h2>Pricing</h2>
+<h2>Why Clients Trust Waymaker</h2>
 
-<div class="pricing">
+<div class="trust">
 
-<div class="price">$499</div>
-
-<p>
-Our goal is to save clients at least $2,000 on their vehicle purchase.
-
-If you decide not to buy a vehicle through our process, 80% of the fee is refunded.  
-The remaining 20% covers research and sourcing time already invested.
-</p>
-
-<a class="button" href="#">Pay with PayPal</a>
-<a class="button" href="#">Pay with Stripe</a>
+<div class="badge">10+ Years Dealership Experience</div>
+<div class="badge">Independent Buyer Representation</div>
+<div class="badge">Contract & Warranty Review</div>
+<div class="badge">Goal: Save Clients $2,000+</div>
 
 </div>
 
 </section>
 
 
-<section class="section">
+<section class="section" id="tool">
 
-<h2>Deal Savings Calculator</h2>
+<h2>Dealer Fee Analyzer</h2>
 
-<div class="calculator" style="text-align:center">
+<div class="fee-tool">
 
-<input id="savings" placeholder="Estimated Savings">
+<p>Dealers often add thousands in hidden fees. Enter the numbers below to estimate how much extra you may be paying.</p>
+
+<input id="price" placeholder="Vehicle Price">
+
+<input id="fees" placeholder="Dealer Fees">
 
 <br>
 
-<button class="button" onclick="calc()">Calculate</button>
+<button class="button" onclick="analyze()">Analyze</button>
 
 <p id="result"></p>
 
@@ -323,39 +309,17 @@ The remaining 20% covers research and sourcing time already invested.
 </section>
 
 
-<section class="section" id="faq">
-
-<h2>FAQ</h2>
-
-<p><strong>Why hire a car buying advisor?</strong><br>
-We help buyers avoid hidden fees, confusing contracts, and rushed decisions.</p>
-
-<p><strong>Do you work nationwide?</strong><br>
-Yes. We are based in Connecticut but serve clients across the United States.</p>
-
-<p><strong>What if I already found a car?</strong><br>
-We can review the deal, negotiate terms, and verify everything before you sign.</p>
-
-</section>
-
-
 <section class="section" id="contact">
 
-<h2>Client Intake Form</h2>
+<h2>Start Your Vehicle Search</h2>
 
-<form>
+<p style="text-align:center">
 
-<input placeholder="Name">
+<a class="button" href="#">Schedule Consultation</a>
+<a class="button" href="#">Pay with PayPal</a>
+<a class="button" href="#">Pay with Stripe</a>
 
-<input placeholder="Email">
-
-<input placeholder="Phone">
-
-<textarea placeholder="What vehicle are you looking for?"></textarea>
-
-<button class="button">Submit</button>
-
-</form>
+</p>
 
 </section>
 
@@ -363,25 +327,37 @@ We can review the deal, negotiate terms, and verify everything before you sign.<
 <footer>
 
 <p>Waymaker Auto Services</p>
-
 <p>203-527-2834</p>
-
 <p>waymakerautoservices@gmail.com</p>
-
 <p>Based in Connecticut | Serving Nationwide</p>
 
 </footer>
 
 
+<a class="sticky" href="#">Free Consultation</a>
+
+
 <script>
 
-function calc(){
+const sections=document.querySelectorAll(".section")
 
-let savings=document.getElementById("savings").value
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top
+if(top<window.innerHeight-100){
+sec.classList.add("visible")
+}
+})
+})
 
-let result=savings-499
+function analyze(){
 
-document.getElementById("result").innerHTML="Estimated savings after our fee: $" + result
+let price=document.getElementById("price").value
+let fees=document.getElementById("fees").value
+
+let percent=(fees/price*100).toFixed(2)
+
+document.getElementById("result").innerHTML="Dealer fees are approximately "+percent+"% of the vehicle price."
 
 }
 
