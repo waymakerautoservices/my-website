@@ -27,12 +27,10 @@ justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
-z-index:1000;
 }
 
-.logo{
-font-size:22px;
-font-weight:700;
+header h2{
+margin:0;
 }
 
 nav a{
@@ -47,51 +45,35 @@ opacity:.7;
 }
 
 .hero{
-background-image:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70");
-background-size:cover;
-background-position:center;
+background:#0b1f3a;
 color:white;
 text-align:center;
-padding:160px 20px;
-position:relative;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(11,31,58,0.75);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:800px;
-margin:auto;
+padding:120px 20px;
 }
 
 .hero h1{
-font-size:54px;
-margin-bottom:20px;
+font-size:52px;
+max-width:800px;
+margin:auto;
+margin-bottom:25px;
 }
 
 .hero p{
 font-size:20px;
+max-width:650px;
+margin:auto;
 margin-bottom:40px;
 }
 
 .button{
 display:inline-block;
 padding:16px 32px;
+margin:10px;
 background:#d62828;
 color:white;
 font-weight:600;
 text-decoration:none;
 border-radius:6px;
-margin:10px;
 }
 
 .button:hover{
@@ -102,14 +84,6 @@ opacity:.85;
 max-width:1100px;
 margin:auto;
 padding:90px 20px;
-opacity:0;
-transform:translateY(30px);
-transition:all .6s ease;
-}
-
-.section.visible{
-opacity:1;
-transform:translateY(0);
 }
 
 .section h2{
@@ -130,11 +104,7 @@ padding:30px;
 border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
 text-align:center;
-}
-
-.icon{
-font-size:30px;
-margin-bottom:10px;
+font-weight:500;
 }
 
 .process{
@@ -151,19 +121,30 @@ border-radius:10px;
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-.trust{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+.pricing{
+background:white;
+padding:60px;
+border-radius:12px;
 text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-.badge{
-background:white;
-padding:25px;
-border-radius:8px;
-box-shadow:0 4px 14px rgba(0,0,0,0.08);
-font-weight:600;
+.price{
+font-size:48px;
+color:#d62828;
+margin-bottom:20px;
+}
+
+.calculator input{
+padding:12px;
+margin:10px;
+width:200px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+.calculator button{
+margin-top:10px;
 }
 
 form{
@@ -187,19 +168,6 @@ padding:40px;
 margin-top:60px;
 }
 
-.sticky-cta{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#d62828;
-color:white;
-padding:18px 24px;
-border-radius:50px;
-font-weight:600;
-text-decoration:none;
-box-shadow:0 6px 18px rgba(0,0,0,0.2);
-}
-
 </style>
 
 </head>
@@ -208,13 +176,14 @@ box-shadow:0 6px 18px rgba(0,0,0,0.2);
 
 <header>
 
-<div class="logo">Waymaker Auto Services</div>
+<h2>Waymaker Auto Services</h2>
 
 <nav>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#process">Process</a>
-<a href="#trust">Why Us</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -222,8 +191,6 @@ box-shadow:0 6px 18px rgba(0,0,0,0.2);
 
 
 <section class="hero">
-
-<div class="hero-content">
 
 <h1>The Way, The Truth, and the Best Deal of Your Life</h1>
 
@@ -233,8 +200,6 @@ Based in Connecticut and serving clients nationwide.
 </p>
 
 <a class="button" href="#">Schedule Free Consultation</a>
-
-</div>
 
 </section>
 
@@ -247,12 +212,13 @@ Based in Connecticut and serving clients nationwide.
 
 Waymaker Auto Services was founded by Steven Sudar after more than a decade working inside the dealership industry.
 
-Steven has worked as both a mechanic and a salesperson, giving him firsthand knowledge of how dealerships structure deals, warranties, financing, and negotiations.
+Steven has worked in multiple roles including mechanic and salesperson, giving him firsthand knowledge of how dealerships structure deals, warranties, financing, and negotiations.
 
-After seeing countless buyers rushed into confusing contracts and hidden fees, he founded Waymaker to bring honesty and clarity to the process.
+During those years he saw how often buyers were rushed, misled, or left confused about what they were signing.
 
-As it says in John 14:6, Jesus said, “I am the way, the truth, and the life.”  
-That commitment to truth guides how we serve every client.
+Our mission is to bring honesty and clarity to the car buying process.
+
+As it says in John 14:6, Jesus said, “I am the way, the truth, and the life.” That commitment to truth guides how we serve every client.
 
 </p>
 
@@ -265,14 +231,14 @@ That commitment to truth guides how we serve every client.
 
 <div class="services">
 
-<div class="card"><div class="icon">🚗</div>Vehicle Sourcing</div>
-<div class="card"><div class="icon">💰</div>Price Negotiation</div>
-<div class="card"><div class="icon">📄</div>Dealer Fee Review</div>
-<div class="card"><div class="icon">📊</div>Lease Negotiation</div>
-<div class="card"><div class="icon">🔁</div>Trade-In Negotiation</div>
-<div class="card"><div class="icon">🛠️</div>Pre-Purchase Inspections</div>
-<div class="card"><div class="icon">🔍</div>Used Car Inspection Guidance</div>
-<div class="card"><div class="icon">🛡️</div>Warranty Review</div>
+<div class="card">Vehicle Sourcing</div>
+<div class="card">Price Negotiation</div>
+<div class="card">Dealer Fee Review</div>
+<div class="card">Lease Negotiation</div>
+<div class="card">Trade-in Negotiation</div>
+<div class="card">Warranty Review</div>
+<div class="card">Pre-Purchase Inspections</div>
+<div class="card">Used Car Inspection Guidance</div>
 
 </div>
 
@@ -285,29 +251,90 @@ That commitment to truth guides how we serve every client.
 
 <div class="process">
 
-<div class="step"><h3>1</h3><p>Free 15-minute consultation.</p></div>
-<div class="step"><h3>2</h3><p>Vehicle sourcing & research.</p></div>
-<div class="step"><h3>3</h3><p>Negotiation with dealerships.</p></div>
-<div class="step"><h3>4</h3><p>Contract review before signing.</p></div>
-<div class="step"><h3>5</h3><p>Drive away confident.</p></div>
+<div class="step">
+<h3>1</h3>
+<p>Free 15-minute consultation call.</p>
+</div>
+
+<div class="step">
+<h3>2</h3>
+<p>Vehicle sourcing and research.</p>
+</div>
+
+<div class="step">
+<h3>3</h3>
+<p>Negotiation and dealer fee review.</p>
+</div>
+
+<div class="step">
+<h3>4</h3>
+<p>Contract review before signing.</p>
+</div>
+
+<div class="step">
+<h3>5</h3>
+<p>Drive away confident.</p>
+</div>
 
 </div>
 
 </section>
 
 
-<section class="section" id="trust">
+<section class="section" id="pricing">
 
-<h2>Why Clients Trust Waymaker</h2>
+<h2>Pricing</h2>
 
-<div class="trust">
+<div class="pricing">
 
-<div class="badge">10+ Years Dealership Experience</div>
-<div class="badge">Independent Buyer Representation</div>
-<div class="badge">Contract & Fee Review Before Signing</div>
-<div class="badge">Goal: Save Clients $2,000+ Per Deal</div>
+<div class="price">$499</div>
+
+<p>
+Our goal is to save clients at least $2,000 on their vehicle purchase.
+
+If you decide not to buy a vehicle through our process, 80% of the fee is refunded.  
+The remaining 20% covers research and sourcing time already invested.
+</p>
+
+<a class="button" href="#">Pay with PayPal</a>
+<a class="button" href="#">Pay with Stripe</a>
 
 </div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Deal Savings Calculator</h2>
+
+<div class="calculator" style="text-align:center">
+
+<input id="savings" placeholder="Estimated Savings">
+
+<br>
+
+<button class="button" onclick="calc()">Calculate</button>
+
+<p id="result"></p>
+
+</div>
+
+</section>
+
+
+<section class="section" id="faq">
+
+<h2>FAQ</h2>
+
+<p><strong>Why hire a car buying advisor?</strong><br>
+We help buyers avoid hidden fees, confusing contracts, and rushed decisions.</p>
+
+<p><strong>Do you work nationwide?</strong><br>
+Yes. We are based in Connecticut but serve clients across the United States.</p>
+
+<p><strong>What if I already found a car?</strong><br>
+We can review the deal, negotiate terms, and verify everything before you sign.</p>
 
 </section>
 
@@ -336,30 +363,27 @@ That commitment to truth guides how we serve every client.
 <footer>
 
 <p>Waymaker Auto Services</p>
+
 <p>203-527-2834</p>
+
 <p>waymakerautoservices@gmail.com</p>
+
 <p>Based in Connecticut | Serving Nationwide</p>
 
 </footer>
 
 
-<a class="sticky-cta" href="#">Free Consultation</a>
-
-
 <script>
 
-const sections=document.querySelectorAll(".section")
+function calc(){
 
-window.addEventListener("scroll",()=>{
+let savings=document.getElementById("savings").value
 
-sections.forEach(sec=>{
-const top=sec.getBoundingClientRect().top
-if(top<window.innerHeight-100){
-sec.classList.add("visible")
+let result=savings-499
+
+document.getElementById("result").innerHTML="Estimated savings after our fee: $" + result
+
 }
-})
-
-})
 
 </script>
 
