@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Waymaker Auto Services | The Way, The Truth, and the Best Deal of Your Life</title>
+
+
+<style>
+
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f6f8;
+color:#222;
+}
+
+
+header{
+background:#0a2342;
+color:white;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+
+.hero{
+background:#0a2342;
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+
+.button{
+display:inline-block;
+margin:15px;
+padding:15px 30px;
+background:#c1121f;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
+}
+
+
+.section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+color:#0a2342;
+}
+
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+
+.card{
+background:white;
+padding:25px;
+border-radius:8px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.process{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+text-align:center;
+}
+
+
+.pricing{
+background:#ffffff;
+text-align:center;
+padding:60px;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+.calculator input{
+padding:10px;
+margin:10px;
+width:200px;
+}
+
+
+form{
+display:grid;
+gap:10px;
+max-width:600px;
+margin:auto;
+}
+
+
+form input, form textarea{
+padding:10px;
+}
+
+
+footer{
+background:#0a2342;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<h2>Waymaker Auto Services</h2>
+
+
+<nav>
+
+
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+<section class="hero">
+
+
+<h1>The Way, The Truth, and the Best Deal of Your Life</h1>
+
+
+<p>
+Honest car buying guidance from a former dealership insider.
+Based in Connecticut and serving clients nationwide through remote consulting.
+</p>
+
+
+<a class="button" href="[PASTE GOOGLE CALENDAR LINK]">Schedule Free Consultation</a>
+
+
+</section>
+
+
+
+
+<section class="section" id="about">
+
+
+<h2>About Waymaker</h2>
+
+
+<p>
+
+
+Waymaker Auto Services was founded by Steven Sudar after more than a decade working inside the dealership industry.
+
+
+Steven has worked in multiple roles including mechanic and salesperson, giving him firsthand knowledge of how dealerships structure deals, warranties, financing, and negotiations.
+
+
+During those years he saw how often buyers were rushed, misled, or left confused about what they were actually signing.
+
+
+Our mission is simple: bring honesty and clarity to the car buying process.
+
+
+At Waymaker Auto Services we believe that integrity matters. When people are making one of the largest purchases of their lives, they deserve transparency, patience, and truth.
+
+
+As it says in John 14:6, Jesus said, “I am the way, the truth, and the life.” That principle of truth guides how we serve our clients.
+
+
+</p>
+
+
+</section>
+
+
+
+
+<section class="section" id="services">
+
+
+<h2>Services</h2>
+
+
+<div class="services">
+
+
+<div class="card">Vehicle Sourcing</div>
+<div class="card">Price Negotiation</div>
+<div class="card">Dealer Fee Review</div>
+<div class="card">Lease Negotiation</div>
+<div class="card">Trade-in Negotiation</div>
+<div class="card">Used Car Inspection Guidance</div>
+<div class="card">Pre-Purchase Inspections</div>
+<div class="card">Warranty & Coverage Review</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="section" id="process">
+
+
+<h2>How It Works</h2>
+
+
+<div class="process">
+
+
+<div>
+<h3>1</h3>
+<p>Free 15-minute phone consultation.</p>
+</div>
+
+
+<div>
+<h3>2</h3>
+<p>Vehicle sourcing and dealership research.</p>
+</div>
+
+
+<div>
+<h3>3</h3>
+<p>Negotiation and dealer fee review.</p>
+</div>
+
+
+<div>
+<h3>4</h3>
+<p>Contract and warranty review before signing.</p>
+</div>
+
+
+<div>
+<h3>5</h3>
+<p>Drive away confident.</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="section" id="pricing">
+
+
+<h2>Pricing</h2>
+
+
+<div class="pricing">
+
+
+<h3>Flat Fee: $499</h3>
+
+
+<p>
+Our goal is to save clients at least $2,000 on their vehicle purchase.
+
+
+If you decide not to purchase a vehicle through our process, 80% of the fee will be refunded. The remaining 20% covers the time spent researching vehicles and preparing your deal strategy.
+</p>
+
+
+<a class="button" href="[PAYPAL LINK]">Pay with PayPal</a>
+<a class="button" href="[STRIPE LINK]">Pay with Stripe</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="section">
+
+
+<h2>Deal Savings Calculator</h2>
+
+
+<div class="calculator">
+
+
+<input id="price" placeholder="Vehicle Price">
+
+
+<input id="savings" placeholder="Expected Negotiation Savings">
+
+
+<br>
+
+
+<button class="button" onclick="calculate()">Calculate</button>
+
+
+<p id="result"></p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<section class="section" id="faq">
+
+
+<h2>FAQ</h2>
+
+
+<p><strong>Why hire a car buying advisor?</strong><br>
+Dealership contracts, warranties, and financing can be confusing. We help ensure everything is clearly explained and negotiated in your favor.</p>
+
+
+<p><strong>What if I already found a car?</strong><br>
+We can still review the deal, negotiate terms, and ensure everything is documented before signing.</p>
+
+
+<p><strong>Do you work nationwide?</strong><br>
+Yes. We are based in Connecticut but work with clients across the United States through remote consulting.</p>
+
+
+</section>
+
+
+
+
+<section class="section" id="contact">
+
+
+<h2>Client Intake Form</h2>
+
+
+<form action="https://formspree.io/f/YOURFORMID" method="POST">
+
+
+<input type="text" name="name" placeholder="Name" required>
+
+
+<input type="email" name="email" placeholder="Email" required>
+
+
+<input type="text" name="phone" placeholder="Phone">
+
+
+<textarea name="vehicle" placeholder="What vehicle are you looking for?"></textarea>
+
+
+<textarea name="budget" placeholder="Budget"></textarea>
+
+
+<button class="button" type="submit">Submit</button>
+
+
+</form>
+
+
+</section>
+
+
+
+
+<footer>
+
+
+<p>Waymaker Auto Services</p>
+
+
+<p>Phone: 203-527-2834</p>
+
+
+<p>Email: waymakerautoservices@gmail.com</p>
+
+
+<p>Based in Connecticut | Serving Nationwide</p>
+
+
+</footer>
+
+
+
+
+<script>
+
+
+function calculate(){
+
+
+let price=document.getElementById("price").value;
+let savings=document.getElementById("savings").value;
+
+
+let result=savings-499;
+
+
+document.getElementById("result").innerHTML=
+"Estimated value after our fee: $" + result;
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
