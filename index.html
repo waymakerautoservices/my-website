@@ -818,25 +818,93 @@
       .form-row { grid-template-columns: 1fr; }
     }
 
+    @media (max-width: 900px) {
+      #about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 70px 5%;
+      }
+      .contact-wrapper { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .steps-wrapper::before { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 640px) {
-      nav { padding: 0 4%; }
+      /* NAV */
+      nav { padding: 0 4%; height: 64px; }
+      .nav-logo img { height: 44px; padding: 2px 8px; }
       .nav-links { display: none; }
       .nav-links.open {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 72px;
+        top: 64px;
         left: 0; right: 0;
         background: var(--navy);
         padding: 20px 5%;
         border-bottom: 2px solid var(--red);
         gap: 16px;
+        z-index: 999;
       }
       .hamburger { display: flex; }
-      .footer-top { grid-template-columns: 1fr; }
-      .contact-form { padding: 28px 20px; }
-      .steps-wrapper { gap: 32px; }
+
+      /* HERO */
+      #home { padding: 100px 5% 60px; }
+      .hero-logo { width: min(280px, 85vw); padding: 10px 16px; border-radius: 12px; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-buttons a { width: 100%; text-align: center; }
+      .hero-scripture { font-size: 0.75rem; }
+
+      /* TRUST BAR */
+      .trust-bar { gap: 12px; padding: 14px 4%; }
+      .trust-item { font-size: 0.8rem; gap: 6px; }
+
+      /* SECTIONS */
+      section { padding: 60px 4%; }
+      .section-title { font-size: 1.7rem; }
+
+      /* SERVICES */
+      .services-grid { grid-template-columns: 1fr; gap: 16px; }
+      .service-card { padding: 28px 22px; }
+
+      /* HOW IT WORKS */
+      .steps-wrapper { grid-template-columns: 1fr; gap: 28px; }
+      .step { padding: 0; }
+
+      /* ABOUT */
+      #about { grid-template-columns: 1fr; gap: 32px; padding: 60px 4%; }
+      .about-badge { padding: 32px 24px; }
+      .about-badge img { width: 180px; }
+      .about-values { gap: 10px; }
+
+      /* CONTACT - 3 cards stack */
+      .contact-3col { grid-template-columns: 1fr !important; }
+      .contact-bottom { grid-template-columns: 1fr !important; }
+      #contact > div:last-child { grid-template-columns: 1fr !important; }
+      /* Remove scale on middle card on mobile */
+      #contact > div:nth-child(2) > div:nth-child(2) {
+        transform: scale(1) !important;
+      }
+
+      /* PRICING */
       .pricing-bottom-grid { grid-template-columns: 1fr !important; }
+      #pricing > div:first-child + div > div:first-child { padding: 32px 24px; }
+
+      /* FAQ */
+      .faq-inner { padding: 0; }
+      .faq-question { font-size: 0.95rem; }
+
+      /* FOOTER */
+      .footer-top { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+      footer { padding: 40px 4% 24px; }
+    }
+
+    @media (max-width: 400px) {
+      .hero-logo { width: 90vw; }
+      .section-title { font-size: 1.5rem; }
+      .trust-item { font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -1027,7 +1095,7 @@
     <p class="section-sub" style="margin: 0 auto;">Select the path that best fits your timeline and needs. We're ready when you are.</p>
   </div>
 
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto 32px;">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto 32px;" class="contact-3col">
 
     <!-- Option 1: Call or Text -->
     <div style="background: #fff; border-radius: 12px; padding: 40px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; box-shadow: 0 4px 20px rgba(13,27,46,0.08); border-top: 4px solid var(--navy);">
@@ -1044,8 +1112,8 @@
         <a href="sms:2035272834" style="display:block; background:var(--navy); color:#fff; padding:14px; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:1rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; text-align:center; transition: background 0.2s;" onmouseover="this.style.background='#1a2e4a'" onmouseout="this.style.background='var(--navy)'">
           💬 Text: 203-527-2834
         </a>
-        <a href="mailto:waymakerautoservices@gmail.com" style="display:block; background:var(--light-bg); color:var(--navy); padding:14px; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:0.9rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; text-align:center; border: 2px solid #dde2ea;">
-          ✉️ Email Us
+        <a href="https://mail.google.com/mail/?view=cm&to=waymakerautoservices@gmail.com&su=Car%20Buying%20Inquiry" target="_blank" style="display:block; background:var(--light-bg); color:var(--navy); padding:14px; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; text-decoration:none; text-align:center; border: 2px solid #dde2ea;">
+          ✉️ Email: waymakerautoservices@gmail.com
         </a>
       </div>
     </div>
@@ -1080,12 +1148,12 @@
   </div>
 
   <!-- Bottom note + scripture -->
-  <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;">
+  <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: center;" class="contact-bottom">
     <p style="font-size:0.88rem; color:var(--text-muted); font-style:italic; line-height:1.7;">
       <strong>Note on Option 3:</strong> After your purchase is confirmed, a detailed intake form will be immediately sent to your email to begin the advisory process.
     </p>
     <div style="padding: 16px 20px; background: var(--navy); border-radius: 8px; border-left: 3px solid var(--red);">
-      <p style="color: var(--silver); font-size: 0.88rem; line-height: 1.65; font-style: italic; margin:0;">"And I will ask the Father, and he will give you another advocate to help you and be with you forever."<br><span style="color: var(--red); font-family: 'Barlow Condensed', sans-serif; font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">— John 14:16</span></p>
+      <p style="color: var(--silver); font-size: 0.88rem; line-height: 1.65; font-style: italic; margin:0;">"Blessed are those who have not seen and yet believe."<br><span style="color: var(--red); font-family: 'Barlow Condensed', sans-serif; font-style: normal; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">— John 20:29</span></p>
     </div>
   </div>
 
