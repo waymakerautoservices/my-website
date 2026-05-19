@@ -56,10 +56,8 @@
     .nav-logo img {
       height: 58px;
       object-fit: contain;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 4px 14px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
+      mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
     }
 
     .nav-links {
@@ -152,10 +150,9 @@
     .hero-logo {
       width: min(360px, 78vw);
       margin-bottom: 36px;
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 16px 28px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      filter: drop-shadow(0 8px 32px rgba(0,0,0,0.4));
+      -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
+      mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
       animation: fadeUp 0.9s ease both;
     }
 
@@ -459,9 +456,8 @@
     .about-badge img {
       width: 240px;
       margin-bottom: 28px;
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 10px 20px;
+      -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
+      mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
     }
 
     .about-values {
@@ -720,11 +716,9 @@
     .footer-brand img {
       height: 70px;
       margin-bottom: 16px;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 6px 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       display: block;
+      -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
+      mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
     }
 
     .footer-brand p {
