@@ -20,6 +20,7 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { overflow-x: hidden; }
 
     html { scroll-behavior: smooth; }
 
@@ -888,8 +889,11 @@
       }
 
       /* PRICING */
+      .pricing-grid { grid-template-columns: 1fr !important; }
       .pricing-bottom-grid { grid-template-columns: 1fr !important; }
-      #pricing > div:first-child + div > div:first-child { padding: 32px 24px; }
+      .referral-banner { padding: 24px 20px !important; flex-direction: column !important; text-align: center !important; }
+      .referral-banner a { width: 100%; text-align: center; }
+      #pricing { padding: 60px 4% !important; }
 
       /* FAQ */
       .faq-inner { padding: 0; }
@@ -1169,7 +1173,7 @@
     <p class="section-sub" style="color: var(--silver); margin: 0 auto;">We charge one flat fee. That's it. No commissions, no percentages, no hidden charges.</p>
   </div>
   <div style="max-width: 1100px; margin: 0 auto;">
-    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-bottom: 32px;" class="pricing-grid">
 
       <!-- Flat Fee -->
       <div style="background: #fff; border-radius: 10px; padding: 40px 32px; text-align: center; border-top: 5px solid var(--red);">
@@ -1206,7 +1210,7 @@
     </div>
 
     <!-- Referral banner -->
-    <div style="background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+    <div class="referral-banner" style="background: rgba(255,255,255,0.06); border: 2px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
       <div style="display:flex; align-items:center; gap: 20px;">
         <div style="width: 60px; height: 60px; background: var(--red); border-radius: 50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
