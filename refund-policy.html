@@ -26,22 +26,18 @@
     ul { padding-left: 20px; margin-bottom: 14px; }
     ul li { font-size: 0.97rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 6px; }
     strong { color: var(--text-dark); }
-
     .refund-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 16px rgba(13,27,46,0.08); }
     .refund-table th { background: var(--navy); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 20px; text-align: left; }
     .refund-table td { padding: 16px 20px; font-size: 0.95rem; color: var(--text-muted); border-bottom: 1px solid #e2e6ed; background: #fff; vertical-align: top; }
     .refund-table tr:last-child td { border-bottom: none; }
     .refund-table .amount { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--navy); }
     .refund-table .amount.zero { color: var(--red); }
-
     .clarification-box { background: var(--light-bg); border-left: 4px solid var(--navy); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 28px 0; }
     .clarification-box p { margin: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
     .clarification-box strong { color: var(--navy); }
-
     .fee-box { background: #fff8f0; border-left: 4px solid #e07b00; border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 28px 0; }
     .fee-box p { margin: 0; font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
     .fee-box strong { color: #b35f00; }
-
     footer { background: var(--navy); border-top: 3px solid var(--red); padding: 32px 5%; text-align: center; }
     footer p { font-size: 0.85rem; color: rgba(200,205,212,0.5); margin: 0; }
     footer a { color: var(--silver); text-decoration: none; }
@@ -67,11 +63,11 @@
 
   <h2>Overview</h2>
   <p>At Waymaker Auto Services LLC, we are committed to delivering real value to every client. We want our refund policy to be completely transparent and easy to understand — no fine print, no surprises.</p>
-  <p>All refund requests must be submitted within <strong>30 days of the original purchase date</strong> by emailing us at <strong>waymakerautoservices@gmail.com</strong>. Refund requests submitted after 30 days will not be eligible for consideration.</p>
+  <p>Refund eligibility is determined by the stage of service at the time the request is received, as described below. <strong>The 30-day window from purchase applies only to Stage 0, Stage 1, and Stage 2 refund requests.</strong> Once a client has provided written approval to proceed with negotiation/inspection (Stage 3), refund eligibility ends immediately and permanently, regardless of the 30-day window. All refund requests must be submitted by emailing <strong>waymakerautoservices@gmail.com</strong>.</p>
 
   <h2>Payment Processing Fee</h2>
   <div class="fee-box">
-    <p><strong>Please note:</strong> All payments are processed through Square. Square's payment processing fee (3.3% + $0.30 per transaction) is non-recoverable — meaning Square retains this fee even when a refund is issued. As a result, <strong>all refunds will be issued minus Square's non-recoverable processing fee of approximately $16.70</strong>. This applies to all refund tiers including the pre-intake full refund. We want to be fully transparent about this so there are no surprises.</p>
+    <p><strong>Please note:</strong> All payments are processed through Square. Square's payment processing fee (currently 3.3% + $0.30 per transaction) is non-recoverable — meaning Square retains this fee even when a refund is issued. As a result, <strong>all refunds will be issued minus Square's non-recoverable processing fee</strong> based on the rate at the time of the original transaction. The exact fee amount will be disclosed to the client at the time their refund is approved. We want to be fully transparent about this so there are no surprises.</p>
   </div>
 
   <h2>Our Sourcing & Research Process</h2>
@@ -80,7 +76,7 @@
   </div>
 
   <h2>Refund Schedule</h2>
-  <p>Your refund amount is determined by the stage of service at the time your refund request is received. All refunds are subject to Square's non-recoverable payment processing fee as described above.</p>
+  <p>Your refund amount is determined by the stage of service at the time your refund request is received. All refunds are subject to Square's non-recoverable payment processing fee as described above. <strong>The 24-hour clock referenced in Stage 1 begins at the time the client intake form is submitted, regardless of client responsiveness or communication activity after that point.</strong></p>
 
   <table class="refund-table">
     <thead>
@@ -93,29 +89,30 @@
     <tbody>
       <tr>
         <td><strong>Stage 0 — Not Started</strong></td>
-        <td>Refund requested <strong>before the client intake form has been submitted</strong>. No work of any kind has begun.</td>
-        <td><span class="amount">100%</span><br><small>(minus Square's processing fee of ~$16.70)</small></td>
+        <td>Refund requested <strong>before the client intake form has been submitted</strong> and within 30 days of purchase. No work of any kind has begun.</td>
+        <td><span class="amount">100%</span><br><small>(minus Square's non-recoverable processing fee)</small></td>
       </tr>
       <tr>
         <td><strong>Stage 1 — Early Cancellation</strong></td>
-        <td>Refund requested <strong>within 24 hours</strong> of submitting the client intake form, and the client has <strong>not</strong> given written approval to proceed with negotiation/inspection on a specific vehicle.</td>
+        <td>Refund requested <strong>within 24 hours</strong> of submitting the client intake form and within 30 days of purchase, and the client has <strong>not</strong> given written approval to proceed with negotiation/inspection on a specific vehicle.</td>
         <td><span class="amount">90%</span><br><small>($447.30 of $497, minus processing fee)</small></td>
       </tr>
       <tr>
         <td><strong>Stage 2 — Work In Progress</strong></td>
-        <td>Refund requested <strong>more than 24 hours</strong> after submitting the client intake form, and the client has <strong>not</strong> given written approval to proceed with negotiation/inspection on a specific vehicle.</td>
+        <td>Refund requested <strong>more than 24 hours</strong> after submitting the client intake form and within 30 days of purchase, and the client has <strong>not</strong> given written approval to proceed with negotiation/inspection on a specific vehicle.</td>
         <td><span class="amount">50%</span><br><small>($248.50 of $497, minus processing fee)</small></td>
       </tr>
       <tr>
         <td><strong>Stage 3 — Negotiation/Inspection Authorized</strong></td>
-        <td>The client has given <strong>written approval</strong> (via text or email) authorizing Waymaker Auto Services LLC to proceed with negotiation/inspection on a specific vehicle that we have sourced and presented. This stage applies regardless of when the approval was given.</td>
+        <td>The client has given <strong>written approval</strong> (via text or email) authorizing Waymaker Auto Services LLC to proceed with negotiation/inspection on a specific vehicle that we have sourced and presented. <strong>This stage applies regardless of when the approval was given and regardless of whether the 30-day window has passed.</strong> Once Stage 3 is reached, no refund is available under any circumstances.</td>
         <td><span class="amount zero">0%</span><br><small>No refund available</small></td>
       </tr>
     </tbody>
   </table>
 
   <h2>Written Approval Defined</h2>
-  <p>Written approval means a clear confirmation sent by the client via <strong>text message or email</strong> explicitly authorizing Waymaker Auto Services LLC to move forward with the negotiation and/or inspection stage for a specific vehicle that we have sourced and presented as the best available option. Written approval may include but is not limited to responses such as "yes," "go ahead," "I approve," or any other clear affirmative response to our sourced vehicle presentation.</p>
+  <p>To protect both the client and Waymaker Auto Services LLC, written approval follows a specific process. When we are ready to proceed to the negotiation/inspection stage, we will send the client a written confirmation message via text or email that clearly identifies the specific vehicle by <strong>year, make, model, and listed price</strong>, and explicitly asks the client to confirm their authorization to proceed.</p>
+  <p>The client's affirmative reply to that specific message — including but not limited to responses such as "yes," "confirmed," "go ahead," "I approve," or any other clear affirmative response — constitutes written approval. Written approval is specific to the vehicle identified in that message.</p>
   <p><strong>Verbal approvals given over the phone do not constitute written approval.</strong> In all cases where a client provides verbal approval by phone, Waymaker Auto Services LLC will follow up with a written confirmation request via text or email, and work will not proceed to negotiation/inspection until written confirmation is received.</p>
 
   <h2>How to Request a Refund</h2>
@@ -129,11 +126,14 @@
   </ul>
   <p>We will review your request and respond within 2 business days to confirm eligibility and the applicable refund amount.</p>
 
+  <h2>Chargebacks & Payment Disputes</h2>
+  <p>By purchasing our services, the client agrees to follow this refund policy and to contact Waymaker Auto Services LLC directly at <strong>waymakerautoservices@gmail.com</strong> to resolve any concerns before initiating a chargeback or payment dispute with their bank or credit card provider. Initiating a chargeback or payment dispute without first following this refund request process is a violation of these terms. Waymaker Auto Services LLC reserves the right to dispute any chargeback filed in violation of this policy and to provide all relevant records and documentation to Square and the client's financial institution in defense of such a dispute.</p>
+
   <h2>Refund Processing Time</h2>
   <p>Once a refund is approved, please allow <strong>5–7 business days</strong> for the refund to be processed and returned to your original payment method.</p>
 
   <h2>Deals Falling Through</h2>
-  <p>In the car buying process, deals can and do fall through — a vehicle may be sold to another buyer, a seller may withdraw, or other unforeseen circumstances may prevent a transaction from completing. <strong>A deal falling through does not constitute grounds for a refund</strong> if written approval to proceed with negotiation/inspection has already been given. In such cases, Waymaker Auto Services LLC will continue working with the client to find a suitable alternative vehicle at no additional charge.</p>
+  <p>In the car buying process, deals can and do fall through — a vehicle may be sold to another buyer, a seller may withdraw, or other unforeseen circumstances may prevent a transaction from completing. <strong>A deal falling through does not constitute grounds for a refund</strong> if written approval to proceed with negotiation/inspection has already been given. In such cases, Waymaker Auto Services LLC will continue working with the client to find a suitable alternative vehicle at no additional charge <strong>for up to 90 days from the original purchase date.</strong></p>
 
   <h2>Contact</h2>
   <p>If you have any questions about our refund policy, please contact us at:<br>
