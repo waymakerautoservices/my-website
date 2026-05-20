@@ -640,7 +640,7 @@
     .faq-header .section-divider { margin: 16px auto 0; }
 
     .faq-item {
-      border-bottom: 1px solid #e2e6ed;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
       overflow: hidden;
     }
 
@@ -659,11 +659,11 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      color: var(--navy);
+      color: #fff;
       gap: 16px;
     }
 
-    .faq-question:hover { color: var(--red); }
+    .faq-question:hover { color: var(--silver); }
 
     .faq-icon {
       width: 28px;
@@ -695,7 +695,7 @@
     .faq-answer p {
       padding-bottom: 22px;
       font-size: 0.97rem;
-      color: var(--text-muted);
+      color: var(--silver);
       line-height: 1.75;
     }
 
@@ -1283,12 +1283,12 @@
 
 
 <!-- FAQ -->
-<section id="faq">
+<section id="faq" style="background: var(--navy);">
   <div class="faq-inner">
     <div class="faq-header">
-      <p class="section-label">Common Questions</p>
-      <h2 class="section-title">FAQ</h2>
-      <div class="section-divider"></div>
+      <p class="section-label" style="color: rgba(200,205,212,0.7);">Common Questions</p>
+      <h2 class="section-title" style="color: #fff;">FAQ</h2>
+      <div class="section-divider" style="margin: 16px auto 0;"></div>
     </div>
 
     <div class="faq-item">
