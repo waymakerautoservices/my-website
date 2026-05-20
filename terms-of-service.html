@@ -7,88 +7,26 @@
   <link rel="icon" type="image/x-icon" href="waymaker_favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --navy: #0d1b2e;
-      --red: #b81c2e;
-      --silver: #c8cdd4;
-      --white: #f5f7fa;
-      --light-bg: #f0f2f5;
-      --text-dark: #0d1b2e;
-      --text-muted: #5a6a7e;
-    }
+    :root { --navy: #0d1b2e; --red: #b81c2e; --silver: #c8cdd4; --white: #f5f7fa; --light-bg: #f0f2f5; --text-dark: #0d1b2e; --text-muted: #5a6a7e; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { overflow-x: hidden; }
     body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--text-dark); }
-
-    nav {
-      background: rgba(13,27,46,0.97);
-      border-bottom: 2px solid var(--red);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      height: 72px;
-    }
-    .nav-logo img {
-      height: 58px;
-      object-fit: contain;
-      -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
-      mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%);
-    }
-    .nav-back {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--silver);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: color 0.2s;
-    }
+    nav { background: rgba(13,27,46,0.97); border-bottom: 2px solid var(--red); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 72px; }
+    .nav-logo img { height: 58px; object-fit: contain; -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%); mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 60%, transparent 85%); }
+    .nav-back { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--silver); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
     .nav-back:hover { color: #fff; }
-
-    .hero {
-      background: var(--navy);
-      padding: 60px 5% 50px;
-      text-align: center;
-    }
+    .hero { background: var(--navy); padding: 60px 5% 50px; text-align: center; }
     .hero p { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
     .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; text-transform: uppercase; color: #fff; margin-bottom: 12px; }
     .hero span { font-size: 0.9rem; color: var(--silver); }
-
-    .content {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 60px 5%;
-    }
-
-    h2 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--navy);
-      margin: 40px 0 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--red);
-    }
+    .content { max-width: 860px; margin: 0 auto; padding: 60px 5%; }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--navy); margin: 40px 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--red); }
     h2:first-child { margin-top: 0; }
-
     p { font-size: 0.97rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 14px; }
     ul { padding-left: 20px; margin-bottom: 14px; }
     ul li { font-size: 0.97rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 6px; }
     strong { color: var(--text-dark); }
-
-    footer {
-      background: var(--navy);
-      border-top: 3px solid var(--red);
-      padding: 32px 5%;
-      text-align: center;
-    }
+    footer { background: var(--navy); border-top: 3px solid var(--red); padding: 32px 5%; text-align: center; }
     footer p { font-size: 0.85rem; color: rgba(200,205,212,0.5); margin: 0; }
     footer a { color: var(--silver); text-decoration: none; }
     footer a:hover { color: #fff; }
@@ -100,9 +38,7 @@
   <a href="index.html" class="nav-logo">
     <img src="logosealedbadge.png" alt="Waymaker Auto Services" />
   </a>
-  <a href="index.html" class="nav-back">
-    ← Back to Home
-  </a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
 </nav>
 
 <div class="hero">
@@ -114,7 +50,7 @@
 <div class="content">
 
   <h2>1. Overview</h2>
-  <p>These Terms of Service ("Terms") govern your use of the services provided by Waymaker Auto Services LLC ("Waymaker," "we," "us," or "our"). By purchasing our services or engaging with us in any capacity, you agree to be bound by these Terms.</p>
+  <p>These Terms of Service ("Terms") govern the services provided by Waymaker Auto Services LLC ("Waymaker," "we," "us," or "our"). <strong>By purchasing our services, you agree to be bound by these Terms.</strong></p>
   <p>Waymaker Auto Services LLC is a private car buying consulting service. We are not a licensed auto dealer, broker, financial advisor, or legal advisor. We act solely as a consultant and advocate on behalf of our clients during the vehicle purchasing process.</p>
 
   <h2>2. Services Provided</h2>
@@ -131,22 +67,29 @@
 
   <h2>3. No Guarantee of Outcome</h2>
   <p>While we work diligently to secure the best possible outcome for every client, <strong>Waymaker Auto Services LLC does not guarantee any specific result</strong>, including but not limited to a specific price, a specific vehicle, or the successful completion of a vehicle purchase.</p>
-  <p><strong>Deals may fall through.</strong> In the car buying process, vehicles may be sold to other buyers, financing may fall through, or other unforeseen circumstances may prevent a transaction from completing. If a deal falls through at any stage, Waymaker Auto Services LLC will continue working with the client at no additional charge to find a suitable alternative.</p>
+  <p><strong>Deals may fall through.</strong> In the car buying process, vehicles may be sold to other buyers, financing may fall through, or other unforeseen circumstances may prevent a transaction from completing. If a deal falls through at any stage, Waymaker Auto Services LLC will continue working with the client at no additional charge to find a suitable alternative, for up to <strong>90 days from the original purchase date.</strong></p>
 
-  <h2>4. Client Responsibilities</h2>
-  <p>By engaging our services, the client agrees to:</p>
+  <h2>4. Service Timeline</h2>
+  <p>Waymaker Auto Services LLC does not guarantee any specific timeline for the completion of services. Service timelines vary based on factors including but not limited to vehicle availability, market conditions, dealership responsiveness, third-party inspection scheduling, and the client's own responsiveness and decision-making timeline. No refund shall be issued solely on the basis of a perceived delay in service.</p>
+
+  <h2>5. Client Responsibilities</h2>
+  <p>By purchasing our services, the client agrees to:</p>
   <ul>
     <li>Complete and submit the client intake form promptly after purchase</li>
-    <li>Provide accurate and complete information regarding budget, preferences, and financial situation</li>
-    <li>Respond to communications in a timely manner</li>
-    <li>Clearly communicate any changes to preferences or circumstances</li>
+    <li>Provide accurate, complete, and truthful information regarding budget, preferences, and financial situation</li>
+    <li>Respond to communications from Waymaker Auto Services LLC within <strong>2 business days</strong> — failure to respond within this window may pause our service obligations until a response is received</li>
+    <li>Clearly communicate any changes to preferences or circumstances in a timely manner</li>
     <li>Confirm vehicle approvals in writing via text or email before we proceed to negotiation or inspection</li>
   </ul>
+  <p><strong>Accuracy of Information:</strong> If a client provides inaccurate, incomplete, or misleading information that affects the outcome of our services, Waymaker Auto Services LLC shall not be held liable for any results, delays, or issues arising from that misinformation. This includes but is not limited to inaccurate budget information, undisclosed credit issues, or misrepresentation of trade-in vehicle condition.</p>
 
-  <h2>5. Vehicle Approval Process</h2>
+  <h2>6. Vehicle Approval Process</h2>
   <p>Once Waymaker sources and presents vehicle options to a client, the client must provide written confirmation (via text or email) before we proceed to the negotiation or inspection stage. Verbal approvals given over the phone will be followed by a written confirmation request. Work will not proceed to the next stage until written confirmation is received.</p>
 
-  <h2>6. Limitation of Liability</h2>
+  <h2>7. Client Document Responsibility</h2>
+  <p>While Waymaker Auto Services LLC reviews contracts, inspection reports, vehicle history reports (such as Carfax), and other related paperwork on behalf of our clients and will flag anything that appears unusual, unclear, or potentially unfavorable, <strong>the client remains solely responsible for thoroughly reading, understanding, and agreeing to any document, contract, or report they receive or sign.</strong> Our review of any document is advisory in nature and does not constitute legal advice. We strongly encourage all clients to read every document in full — including but not limited to purchase contracts, financing agreements, inspection reports, and vehicle history reports — before signing or making any purchasing decision. Clients are encouraged to consult a licensed attorney if they have any legal questions or concerns about any document. By signing any contract or proceeding with a purchase, the client acknowledges that they have had the opportunity to review all relevant documents in full. Waymaker Auto Services LLC shall not be held liable for any terms, conditions, findings, or disclosures contained in any document received or signed by the client.</p>
+
+  <h2>8. Limitation of Liability</h2>
   <p>Waymaker Auto Services LLC shall not be held liable for:</p>
   <ul>
     <li>The condition of any vehicle purchased</li>
@@ -154,16 +97,21 @@
     <li>Financing terms offered by lenders</li>
     <li>Any loss, damage, or expense arising from a deal falling through</li>
     <li>Decisions made by the client after our consultation</li>
+    <li>Any outcome resulting from inaccurate or incomplete information provided by the client</li>
+    <li>Service delays caused by client unresponsiveness, third-party scheduling, or market conditions</li>
   </ul>
   <p>Our total liability to any client shall not exceed the amount paid for our services ($497).</p>
 
-  <h2>7. Modifications to Terms</h2>
+  <h2>9. Dispute Resolution</h2>
+  <p>In the event of any dispute arising from or related to these Terms or our services, both parties agree to first attempt to resolve the dispute through good-faith informal negotiation. The client must notify Waymaker Auto Services LLC of the dispute in writing via email at waymakerautoservices@gmail.com and allow a minimum of <strong>14 business days</strong> for informal resolution before pursuing any formal legal action. If informal resolution is unsuccessful, both parties agree to pursue mediation before initiating any court proceedings. Any legal action that cannot be resolved through negotiation or mediation shall be governed by the laws of the State of Connecticut and resolved in the courts of Connecticut.</p>
+
+  <h2>10. Modifications to Terms</h2>
   <p>Waymaker Auto Services LLC reserves the right to update these Terms at any time. Changes will be posted on this page with an updated date. Continued use of our services constitutes acceptance of the revised Terms.</p>
 
-  <h2>8. Governing Law</h2>
-  <p>These Terms shall be governed by the laws of the State of Connecticut. Any disputes arising from these Terms shall be resolved in the courts of Connecticut.</p>
+  <h2>11. Governing Law</h2>
+  <p>These Terms shall be governed by the laws of the State of Connecticut.</p>
 
-  <h2>9. Contact</h2>
+  <h2>12. Contact</h2>
   <p>If you have any questions about these Terms, please contact us at:<br>
   <strong>Email:</strong> waymakerautoservices@gmail.com<br>
   <strong>Phone/Text:</strong> 203-527-2834</p>
