@@ -27,6 +27,7 @@
     ul li { font-size: 0.97rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 6px; }
     strong { color: var(--text-dark); }
     .refund-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 16px rgba(13,27,46,0.08); }
+    .refund-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 20px 0 28px; border-radius: 8px; box-shadow: 0 2px 16px rgba(13,27,46,0.08); }
     .refund-table th { background: var(--navy); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 20px; text-align: left; }
     .refund-table td { padding: 16px 20px; font-size: 0.95rem; color: var(--text-muted); border-bottom: 1px solid #e2e6ed; background: #fff; vertical-align: top; }
     .refund-table tr:last-child td { border-bottom: none; }
@@ -42,6 +43,21 @@
     footer p { font-size: 0.85rem; color: rgba(200,205,212,0.5); margin: 0; }
     footer a { color: var(--silver); text-decoration: none; }
     footer a:hover { color: #fff; }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 4%; height: 64px; }
+      .nav-logo img { height: 44px; }
+      .hero { padding: 40px 4% 36px; }
+      .content { padding: 40px 4%; }
+      h2 { font-size: 1.1rem; }
+      .refund-table { font-size: 0.85rem; }
+      .refund-table th { padding: 10px 12px; font-size: 0.75rem; }
+      .refund-table td { padding: 12px; font-size: 0.85rem; }
+      .refund-table .amount { font-size: 1rem; }
+      .fee-box { padding: 16px 16px; }
+      .clarification-box { padding: 16px 16px; }
+      footer p { font-size: 0.75rem; line-height: 1.8; }
+    }
   </style>
 </head>
 <body>
@@ -78,6 +94,7 @@
   <h2>Refund Schedule</h2>
   <p>Your refund amount is determined by the stage of service at the time your refund request is received. All refunds are subject to Square's non-recoverable payment processing fee as described above. <strong>The 24-hour clock referenced in Stage 1 begins at the time the client intake form is submitted, regardless of client responsiveness or communication activity after that point.</strong></p>
 
+  <div class="refund-table-wrap">
   <table class="refund-table">
     <thead>
       <tr>
@@ -109,6 +126,7 @@
       </tr>
     </tbody>
   </table>
+  </div>
 
   <h2>Written Approval Defined</h2>
   <p>To protect both the client and Waymaker Auto Services LLC, written approval follows a specific process. When we are ready to proceed to the negotiation/inspection stage, we will send the client a written confirmation message via text or email that clearly identifies the specific vehicle by <strong>year, make, model, and listed price</strong>, and explicitly asks the client to confirm their authorization to proceed.</p>
